@@ -1,5 +1,4 @@
 package testing;
-import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
