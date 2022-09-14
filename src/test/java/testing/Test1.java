@@ -1,8 +1,11 @@
 package testing;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 public class Test1 {
 
@@ -16,7 +19,12 @@ public class Test1 {
     @Given("I am on the Google home page")
     public void I_am_on_the_Google_home_page() {
         driver.get("https://www.google.com");
-        System.out.println("salut");
+    }
+
+    @Then("is google open")
+    public void is_google_open() {
+        assertEquals( "https://www.google.com/" ,  driver.getCurrentUrl());
+        System.out.println(driver.getCurrentUrl());
     }
 
 
